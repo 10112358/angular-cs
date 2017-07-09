@@ -1,0 +1,2 @@
+# angular-cs
+angular-cloudsearch
