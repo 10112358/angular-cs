@@ -1,0 +1,43 @@
+﻿/* 右侧工具栏*/
+#J-global-toolbar{
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif; 
+    -webkit-font-smoothing: antialiased; 
+    background-color: #fff; 
+    color: #666; 
+    * { margin: 0; padding: 0; }
+    a { color: #666; text-decoration: none; }
+    em, i { font-style: normal; }
+    .hide, .none { display: none; }  
+
+    .jdm-toolbar { position: absolute; right: 0px; top: 0px; width: 0px; height: 100%; border-right: 6px solid rgb(122, 110, 110); transition: right 0.3s ease-in-out 0s; }
+    .jdm-toolbar-header { position: absolute; top: 0px; right: -6px; }
+    .jdm-toolbar-panels { position: absolute; left: 6px; top: 0px; width: 270px; height: 100%; z-index: 2; background: rgb(236, 234, 234); }
+    .jdm-toolbar-wrap { position: fixed; top: 0px; right: 0px; z-index: 9990; width: 0px; height: 100%; }
+    .jdm-toolbar-wrap a { text-decoration: none; }
+
+    .jdm-toolbar-tabs {/*工具栏*/ position: absolute; top: 50%; left: -29px; width: 35px; margin-top: -61px; }  
+    .jdm-toolbar-tab { position: relative; width: 35px; height: 35px; margin-bottom: 1px; cursor: pointer; background-color: rgb(122, 110, 110); border-radius: 3px 0px 0px 3px; }  
+    .jdm-toolbar-tab .tab-ico { width: 34px; height: 35px; margin-left: 1px; position: relative; z-index: 2; background-color: rgb(122, 110, 110); }  
+    .jdm-toolbar-tab .tab-sub { position: absolute; z-index: 3; right: 2px; top: -5px; height: 11px; color: rgb(255, 255, 255); text-align: center; min-width: 11px; background-color: rgb(204, 96, 96); background-image: linear-gradient(rgb(204, 96, 96) 0px, rgb(182, 29, 29) 100%); padding: 1px 2px; border-width: 1px; border-style: solid; border-color: rgb(182, 29, 29); border-image: initial; overflow: hidden; font: 11px/11px verdana; border-radius: 10px; }  
+    .jdm-toolbar-tab .tab-text { width: 62px; height: 35px; line-height: 35px; color: rgb(255, 255, 255); text-align: center; font-family: 微软雅黑; position: absolute; z-index: 1; left: 35px; top: 0px; background-color: rgb(122, 110, 110); border-radius: 3px 0px 0px 3px; transition: left 0.3s ease-in-out 0.1s; }  
+    .jdm-toolbar-tab .tab-tip { position: absolute; top: 8px; right: 10px; width: 6px; height: 6px; z-index: 999; background-position: -150px -150px; }  
+    .jdm-toolbar-tab:hover, .jdm-toolbar-tab:hover .tab-ico { background-color: rgb(200, 22, 35); }
+    .jdm-toolbar-tab:hover .tab-sub { color: rgb(200, 22, 35); background-color: rgb(255, 255, 255); background-image: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 100%); box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px; text-shadow: rgba(0, 0, 0, 0.3) 1px 0px 1px; }
+    .jdm-toolbar-tab:hover .tab-text { left: -60px; background-color: rgb(200, 22, 35); }
+    .jdm-toolbar-tab:hover .tab-tip { display: none; }
+    .jdm-toolbar-tabs .tabs-tip .ico { width: 15px; height: 12px; position: absolute; top: 13px; left: 10px; background-position: -98px -162px; }  
+    .jdm-toolbar-tabs .tabs-tip b { width: 0px; height: 0px; line-height: 0; font-size: 0px; position: absolute; right: -12px; top: 12px; z-index: 20; border-width: 6px; border-style: dashed dashed dashed solid; border-color: transparent transparent transparent rgb(200, 22, 35); border-image: initial; border-left: 6px solid rgb(200, 22, 35); }  
+    .jdm-tbar-panel-header .close-panel, .jdm-tbar-panel-header i, .jdm-toolbar-tab .tab-ico, .jdm-toolbar-tab .tab-tip, .jdm-toolbar-tabs .tabs-tip .ico { display: inline-block; background-image: url('../imgs/lpf/toolbars.png'); background-repeat: no-repeat; }  
+    .jdm-tbar-tab-cart .tab-ico { background-position: -50px 0px; }  
+    .jdm-tbar-tab-follow .tab-ico { background-position: -50px -50px; }  
+    .jdm-tbar-tab-history .tab-ico { background-position: -50px -100px; }  
+    .jdm-tbar-tab-jdvip .tab-ico { background-position: -88px -175px; }  
+    .jdm-tbar-tab-jimi .tab-ico { background-position: -50px -150px; }   
+    .jdm-tbar-tab-message .tab-ico { background-position: -190px -150px; }
+
+    .jdm-toolbar-footer {/*反馈与回顶部 */ position: absolute; bottom: -1px; width: 100%; left: -29px; } 
+    .jdm-toolbar-footer .jdm-toolbar-tab .tab-text { width: 50px; } 
+    .jdm-toolbar-footer .jdm-toolbar-tab:hover .tab-text { left: -48px; }
+    .jdm-tbar-tab-top .tab-ico { background-position: -50px -250px; } 
+    .jdm-tbar-tab-feedback .tab-ico { background-position: -50px -300px; } 
+}

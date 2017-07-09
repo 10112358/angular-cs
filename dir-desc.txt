@@ -1,0 +1,80 @@
+├─app
+│  ├─app.routes.ts                  //设置一级路由，顶部导航条已被注释
+│  ├─daohang 						//暂时的导航页面，无样式，在此处设置前台链接
+│  ├─pcenter 						//个人中心
+│  ├─pcenter2 						//个人中心，调试用
+│  └─searchtest                     //首页的左侧菜单 暂放于此，勿直接替换
+
+├─assets 							//这个目录里面是一些CSS、字体图标、图片等
+│  ├─css                            //样式文件，不用单独建立文件夹
+│  │                                
+│  │  ├─leftmenu.scss               //首页中的左侧菜单
+│  │  ├─pcenter.scss                //个人中心
+│  │  └─toolbar.scss                //右侧工具栏
+│  ├─fonts                          
+│  │  └─iconfont                    //矢量图标库，添加图标需更新
+│  └─imgs                           //图片文件，以自己名字分别建立文件夹
+
+'./src/index.html'                  //所有页面，均嵌入在该页面中
+'./src/styles.scss'                 //部分全局样式
+
+
+
+
+├─app
+│  ├─animations						//这里定义了动画效果
+│  ├─comment 						//这里是添加评论组件
+│  │  ├─add-comment
+│  │  ├─model
+│  │  └─services
+│  ├─home 							//这是首页组件
+│  │  ├─online-contact
+│  │  └─social-channel
+│  ├─manage                         //这是管理员后台组件
+│  │  ├─comment-table
+│  │  ├─manage-main
+│  │  ├─post-table
+│  │  │  └─services
+│  │  ├─sys-param
+│  │  └─user-table
+│  ├─post 							//这是跟文章有关的组件
+│  │  ├─model
+│  │  ├─post-detail
+│  │  │  └─services
+│  │  ├─post-detail-main
+│  │  ├─postlist
+│  │  │  └─services
+│  │  └─write-post                  //这是写文章组件，需要参考TinyMCE编辑器和ng2集成的请看这里
+│  ├─shared
+│  ├─sitestat
+│  ├─user 							//这里是与用户相关的组件
+│  │  ├─forget-pwd
+│  │  ├─model
+│  │  ├─user-info                   //@Input和@Output的用法请参考这个目录
+│  │  ├─user-login                  //模板驱动型表单请参考这个目录
+│  │  ├─user-main
+│  │  ├─user-profile                //动态表单请参考这个目录
+│  │  │  └─dyn-form
+│  │  │      └─field
+│  │  └─user-register               //响应式表单请参考这个目录
+│  │      └─directives
+│  └─utils
+├─assets 							//这个目录里面是一些CSS、字体图标、图片等
+│  ├─bootstrap-v3.3.7
+│  ├─css                            
+│  ├─fonts
+│  │  ├─bootstrap
+│  │  ├─icomoon
+│  │  │  └─icomoon
+│  │  │      ├─demo-files
+│  │  │      └─fonts
+│  │  └─simple-line-icons
+│  ├─i18n
+│  ├─imgs
+│  └─skins
+│      └─lightgray
+│          ├─fonts
+│          └─img
+├─documentation
+├─environments
+└─mock-data 						//测试数据全部放在这个目录里面，【注意】这个目录需要你手动拷贝到Tomcat去

@@ -1,0 +1,11 @@
+{
+    "items":[{
+    "id": 1,
+    "userName": "admin",
+    "token": "fake-jwt-token"
+},{
+    "id": 2,
+    "userName": "supplier",
+    "token": "fake-supplier-token"
+}]
+}

@@ -1,0 +1,70 @@
+<!-- 顶部导航 -->
+<div class="navbar navbar-fixed-top main-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button #button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" (click)="toggle(button)">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a routerLink="../posts" class="navbar-brand navbar-brand-my">
+                NiceFish
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active" class="dropdown">
+                    <a routerLink="../posts" target="_blank">{{'app.articles' | translate}}</a>
+                </li>
+                 <li class="dropdown">
+                    <a routerLink="../searchtest" target="_blank">搜索测试</a>
+                </li>
+                 <li class="dropdown">
+                    <a routerLink="../pcenter" target="_blank">个人中心</a>
+                </li>
+                 <!--<li class="dropdown">
+                    <a href="http://localhost:4200/pcenter" target="_blank">个人中心</a>
+                </li>-->
+                
+                <li class="dropdown">
+                    <a routerLink="../echart" target="_blank">集成图表</a>
+                </li>
+                <li class="dropdown">
+                    <a routerLink="../map" target="_blank">高德地图</a>
+                </li>
+                <li class="dropdown">
+                    <a routerLink="../jquery" target="_blank">集成jQuery</a>
+                </li>
+                <li class="dropdown">
+                    <a routerLink="../jsplumb" target="_blank">集成jsplumb</a>
+                </li>
+                <li class="dropdown">
+                    <a href="http://git.oschina.net/mumu-osc/NiceFish" data-toggle="dropdown" class="dropdown-toggle" target="_blank">NiceFish</a>
+                </li>
+                <li class="dropdown">
+                    <a href="http://git.oschina.net/zt_zhong/CodeBe" data-toggle="dropdown" class="dropdown-toggle" target="_blank">CodeBe</a>
+                </li>
+            </ul>
+            <ul *ngIf="!currentUser?.userName" class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <a routerLink="../login">{{'app.login' | translate}}</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="../register">{{'app.register' | translate}}</a>
+                </li>
+            </ul>
+            <ul *ngIf="currentUser?.userName" class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active">
+                    <a routerLink="../user">{{'app.welcome' | translate}}：{{currentUser?.userName}}</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="../manage">{{'app.console' | translate}}</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" (click)="doLogout()">{{'app.logout' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

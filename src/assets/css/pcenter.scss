@@ -1,0 +1,658 @@
+@charset "utf-8";
+/* 个人中心*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont/iconfont.eot');
+    /* IE9*/
+    src: url('../fonts/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont/iconfont.svg#uxiconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+#pcenter {
+    font: 12px/150% tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    background: #fff;
+
+a,address,b,big,blockquote,body,center,cite,code,dd,del,div,dl,dt,em,fieldset,font,form,
+h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,u,ul,var 
+{
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #C81623;
+}
+ul,menu,dir {
+    display: block;
+    list-style-type: disc;
+}
+ol,ul,li {
+    list-style: none;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+em, i, u {
+    font-style: normal;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+/*common*/
+.ar {
+    text-align: right;
+}
+.cw-icon {
+    position: relative;
+    z-index: 1;
+    float: left;
+    border: 1px solid rgba(255, 0, 0, 0);
+}
+.cw-icon .i, .cw-icon i {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+.clear, .clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+.dorpdown {
+    position: relative;
+}
+.dorpdown-layer {
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+.dorpdown:hover .dorpdown-layer, .hover .dorpdown-layer {
+    display: block;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.fr .cw-icon {
+    padding-right: 20px!important;
+}
+.iconfont {
+    font-family: iconfont;
+    font-style: normal;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fr .iconfont {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+.form .itxt, .form .text {
+    height: 18px;
+    width: 137px;
+    padding: 5px 23px 5px 5px;
+}
+.form .text {
+    line-height: 18px;
+    border: 1px solid #ccc;
+}
+.m, .mb, .mc, .mt, .p-detail, .p-img, .p-market, .p-name, .p-price, .sm, .smb, .smc, .smt {
+    overflow: hidden;
+}
+.m, .mb, .mc, .mt, .sm, .smb, .smc, .smt {
+    zoom: 1;
+}
+.w {
+    width: 990px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 1280px) {
+    .w {
+        width: 1210px;
+    }
+}
+/*导航*/
+#shortcut {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: #F1F1F1;
+}
+#shortcut li {
+    float: left;
+    height: 30px;
+    padding: 0 2px;
+}
+#shortcut li.space {
+    width: 1px;
+    height: 12px;
+    margin-top: 9px;
+    padding: 0;
+    background: #ddd;
+    overflow: hidden;
+}
+#shortcut .w {
+    background: #F1F1F1;
+}
+#shortcut .cw-icon {
+    height: 31px;
+    line-height: 28px;
+}
+#shortcut .dt {
+    padding: 0 7px 0px;
+}
+#shortcut .dd {
+    line-height: 24px;
+}
+#shortcut .ci-right {
+    top: 1px;
+    right: 8px;
+}
+#shortcut .dorpdown-layer {
+    top: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+#shortcut #area .dd {
+    width: 313px;
+    padding: 10px 0 10px 10px;
+}
+#shortcut #area .dorpdown-layer {
+    display: none;
+}
+#shortcut #area:hover .dorpdown-layer {
+    display: block;
+}
+#shortcut #area .item {
+    float: left;
+    width: 60px;
+    padding: 2px 0;
+}
+#shortcut li.dorpdown:hover .dt {
+    background: #fff;
+    border: solid #ddd;
+    border-width: 0 1px;
+    position: relative;
+    z-index: 3;
+}
+#shortcut .fr .dorpdown-layer{    
+    width: 77px;
+    padding: 5px;
+}
+#shortcut .style-red {
+    color: #C81623;
+}
+/*首行*/
+#nav {
+    position: relative;
+    _position: static;
+    width: 100%;
+    height: 80px;
+    background-color: #e45050;
+}
+#nav .w {
+    background-color: #e45050;//#337ab7;//#027cff
+}
+#nav .logo {
+    position: relative;
+    float: left;
+    width: 272px;
+    height: 80px;
+    overflow: hidden;
+}
+#nav .logo a {
+    text-decoration: none;
+    color: #fff;
+}
+#nav .logo .fore1 {
+    float: left;
+    margin-right: 10px;
+    width: 158px;
+    height: 80px;
+    background: url('../imgs/lpf/logo.png') no-repeat;
+}
+#nav .logo .fore2 {
+    float: left;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    margin: 20px 0 0 6px;
+    height: 22px;
+}
+#nav .logo .fore3 {
+    float: left;
+    margin: 5px 0 0;
+    color: #ffb2b2;
+    border: 1px solid #ffb2b2;
+    height: 20px;
+    line-height: 18px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+#nav .navitems {
+    float: left;
+    height: 80px;
+    width: 342px;
+    line-height: 36px;
+    padding: 22px 0;
+    margin: 0 0 0 30px;
+    font-size: 14px;
+}
+#nav .navitems ul {
+    display: inline-block;
+}
+#nav .navitems li {
+    float: left;
+    margin: 0 20px 0 0;
+}
+#nav .navitems li.fore-2 {
+    margin: 0 10px 0 0;
+}
+#nav .navitems a {
+    color: #fff;
+    position: relative;
+}
+#nav .navitems a i {/*右上角提示数字*/
+    display: block;
+    position: absolute;
+    font-family: verdana;
+    color: #333;
+    text-align: center;
+    padding: 0 5px;
+    border-radius: 9px 9px 9px 0;
+    background-color: #fff;
+    left: 28px;
+    top: -15px;
+    height: 18px;
+    line-height: 18px;
+}
+#nav .navitems .dl {
+    position: relative;
+}
+#nav .navitems .dl .dt {
+    white-space: nowrap;
+    height: 36px;
+    line-height: 18px;
+    padding: 9px 16px;
+    width: 106px;
+}
+#nav .navitems .dl:hover {
+    z-index: 1;
+}
+#nav .navitems .dl:hover .dt {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    box-shadow: 0 3px 5px rgba(153,153,153,.5);
+}
+#nav .navitems .dl:hover .dd {
+    display: block;
+}
+#nav .navitems .dl .dt span {
+    color: #fff;
+}
+#nav .navitems .dl i {
+    color:#fff;
+    -webkit-text-stroke-width: 0.5px;
+}
+#nav .navitems .dl:hover {.dt ,.dd {span, i {
+    color: #000;
+}}}
+#nav .navitems .dl .dd {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: 0;
+    font-size: 12px;
+}
+#nav .navitems .dl .dd a {
+    display: block;
+    text-decoration: none;
+    width: 104px;
+    padding: 0 0 0 16px;
+    line-height: 30px;
+}
+#nav .nav-r {
+    float: right;
+    width: 340px;
+    margin-right: 5px;
+}
+#search {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 186px;
+    margin-top: 24px;
+}
+#search .text {
+    float: left;
+    width: 128px;
+    border: 0;
+    height: 32px;
+    line-height: 24px;
+    color: #666;
+    padding: 4px;
+    margin-bottom: 4px;
+    outline: 0;
+    font-size: 14px;
+    font-family: "microsoft yahei";
+}
+#nav .nav-r #search .form {
+    width: auto;
+    height: 36px;
+}
+#search .button {
+    float: left;
+    width: 56px;
+    height: 32px;
+    background-color: #f7f7f7;
+    border: none;
+    line-height: 1;
+    color: #333;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    cursor: pointer;
+}
+#settleup {
+    float: right;
+    z-index: 3;
+    height: 36px;
+    margin-top: 24px;
+}
+#nav .nav-r #settleup {
+    float: right;
+    margin-right: 0;
+}
+#settleup .cw-icon {
+    width: 141px;
+    height: 32px;
+    border: 1px solid #fff;
+    padding: 0 28px 0 36px;
+    background: #F9F9F9;
+    text-align: center;
+    line-height: 34px;
+}
+#nav .nav-r .iconfont{
+    margin-left: -22px;
+    -webkit-text-stroke-width: 0.5px;
+    font-size: 20px;
+}
+#settleup .ci-right {
+    //top: 9px;
+    right: 3px;
+    //width: 7px;
+    //height: 13px;
+    overflow: hidden;
+    //font: 400 13px/13px simsun;
+    color: #999;
+}
+#settleup .ci-count {
+    position: absolute;
+    top: -4px;
+    left: 104px;
+    display: inline-block;
+    padding: 1px 2px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #c81623;
+    border-radius: 7px 7px 7px 0;
+    min-width: 16px;
+    text-align: center;
+}
+#settleup:hover .cw-icon, 
+#settleup:hover .dorpdown-layer {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+#settleup:hover .dorpdown-layer {
+    top: 32px;
+    display: block;
+    right: 0;
+    width: 310px;
+}
+#settleup:hover .spacer {
+    position: absolute;
+    right: 0;
+    top: -7px;
+    width: 139px;
+    height: 12px;
+    background: #fff;
+}
+#settleup-content {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    background: #fff;
+}
+#settleup-content .smt {
+    height: 37px;
+    padding: 6px 8px;
+    line-height: 25px;
+}
+#settleup-content .smc {
+    background: #fff;
+    /*height: auto!important;*/
+    height: auto;
+    max-height: 275px;
+    overflow-y: auto;
+}
+#settleup-content ul {
+    margin-top: -1px;
+}
+#settleup-content li {
+    padding: 8px 10px;
+    border-top: 1px dotted #ccc;
+    overflow: hidden;
+    line-height: 17px;
+    vertical-align: bottom;
+}
+#settleup-content .p-img {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #ddd;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 0;
+}
+#settleup-content .p-name {
+    width: 120px;
+    height: 52px;
+}
+#settleup-content .p-detail {
+    text-align: right;
+}
+#settleup-content .p-price {
+    font-weight: 700;
+}
+#settleup-content .smb {
+    padding: 8px;
+    background: #F5F5F5;
+}
+#settleup-content .smb .p-total {
+    float: left;
+    line-height: 29px;
+}
+#settleup-content .smb a {
+    float: right;
+    height: 29px;
+    padding: 0 10px;
+    background: #E4393C;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 29px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+#hotwords {
+    float: left;
+    height: 20px;
+    width: auto;
+    margin-top: -1px;
+    display: block;
+    line-height: 20px;
+    overflow: hidden;
+}
+#hotwords a {
+    padding-right: 10px;
+    color: #fff;
+}
+/*主体*/
+#_container, #_container .w {
+    background-color: #f5f5f5;
+}
+#content {
+    padding-left: 120px;
+    padding-top: 20px;
+    display: inline-block;
+    display: block;
+}
+#content:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#sub {
+    float: left;
+    width: 120px;
+    position: relative;
+    left: -120px;
+}
+#menu {
+    width: 110px;
+    padding-left: 10px;
+}
+#menu dl {
+    padding-bottom: 15px;
+}
+#menu dl dt {
+    height: 28px;
+    line-height: 28px;
+    color: #333;
+    font-weight: 700;
+}
+#menu dl dd {
+    color: #666;
+    line-height: 24px;
+}
+#menu dl dd a {
+    color: #777;
+}
+#main {
+    float: left;
+    width: 99.9%;
+    margin-left: -120px;
+    overflow: hidden;
+}
+/*foot1*/
+#service {
+    margin-bottom: 20px;
+}
+#service .slogen {
+    position: relative;
+    height: 94px;
+    padding: 20px 0;
+    margin-bottom: 14px;
+    background: #F5F5F5;
+    text-align: center;
+}
+#service .slogen .item {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 245px;
+    height: 54px;
+    text-align: left;
+    vertical-align: middle;
+    font: 400 18px/50px "microsoft yahei";
+}
+#service .slogen .fore1 {
+    /*background-image: url();*/
+    margin-left: -490px;
+}
+#service .slogen .fore2 {
+    /*background-image: url();*/
+    margin-left: -245px;
+}
+#service .slogen .fore3 {
+    /*background-image: url();*/
+    margin-left: 0;
+}
+#service .slogen .fore4 {
+    /*background-image: url();*/
+    margin-left: 245px;
+}
+#service .slogen .item b {
+    padding: 0 10px;
+    font-size: 24px;
+    color: #C81623;
+ }
+#service .slogen .item i {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 220px;
+    height: 54px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#service .w {
+    width: 950px;
+}
+#service .wl {
+    width: 700px;
+}
+#service .wr {
+    width: 221px;
+    height: 145px;
+    padding: 0 10px 5px 50px;
+    border-left: 1px dashed #888;
+}
+#service dl {
+    float: left;
+    width: 22%;
+}
+#service dl.fore5 {
+    width: 12%;
+}
+#service dt {
+    font-weight: bold;
+    padding: 6px 0;
+    font: 400 16px/24px "microsoft yahei";
+}
+#service dd {
+    padding-left: 10px; 
+    line-height: 20px;
+}
+/*foot2*/
+.w .footimg{
+    margin: 10px auto;
+    width: 1031px;
+}
+}
